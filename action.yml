@@ -1,0 +1,14 @@
+name: 'Publish docs with Confluenza'
+description: 'Publish docs with Confluenza solo template'
+author: "Jeroen Knoops"
+branding:
+  icon: "activity"
+  color: "green"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Create public folder
+      run: |
+        ./.github/bin/create-pages.sh
+      shell: bash
