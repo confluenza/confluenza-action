@@ -13,13 +13,24 @@ Add a `CONFLUENZA.md` in your project with the menu structure and tags.
 See [confluenza documentation](https://confluenza.online/developers/making-confluenza-yours#frontmatter-and-confluenzayml)
 
 #### Page content
-Add a folder `pages` with markdown (`.md` or `.mdx`) files.
+Add a folder `src\pages` with markdown (`.md` or `.mdx`) files.
 Add a frontmatter to a file with information about:
 - `path` : url path
 - `title` : title of section
 - `tag` : tag, which will be used to group items in the side bar menu
 
 See [confluenza documentation](https://confluenza.online/developers/making-confluenza-yours#frontmatter-and-confluenzayml)
+
+#### `gatsby-config.js`
+Add a `gatsby-config.js` file.
+This file contains:
+- the `title` of the site
+- the `prefixPath` (if necessary, see [confluenza documentation](https://solo.confluenza.online/developers/deploying-to-github-pages))
+- the `editBaseUrl`
+
+See [gatsby-config.js](./gatsby-config.js) for an example.
+
+> Temporary solution: This will be removed when #2 is implemented.
 
 ### GitHub Workflow
 

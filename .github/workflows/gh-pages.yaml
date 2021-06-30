@@ -2,9 +2,11 @@ name: GH Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   publish-pages:
@@ -20,6 +22,8 @@ jobs:
         node-version: 14.x
     - name: Create confluenza pages 📦 
       uses: philips-labs/confluenza-action@main
+      env:
+        PREFIX_PATH: true
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:

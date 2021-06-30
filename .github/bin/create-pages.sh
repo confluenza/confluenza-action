@@ -9,19 +9,20 @@ mkdir ${TEMP_DIR}
 
 echo "- getting confluenza"
 cd ${TEMP_DIR} 
-git clone https://github.com/confluenza/solo-template confluenza
+git clone https://github.com/confluenza/solo-template ${CONFLUENZA_DIR}
 cd ..
 
 echo "----------------------------------------------------------------"
 echo "- copy contents to confluenza"
 echo "  - copy confluenza.yml"
-
 cp confluenza.yml ${CONFLUENZA_PATH}
+
+echo "  - copy gatsby-config.js"
+cp gatsby-config.js ${CONFLUENZA_PATH}
  
 echo "  - copy pages"
-
 rm -rf ${CONFLUENZA_PATH}/src/pages
-cp -r pages ${CONFLUENZA_PATH}/src/
+cp -r src/pages ${CONFLUENZA_PATH}/src/
 
 echo "----------------------------------------------------------------"
 echo "- yarn"
@@ -32,7 +33,7 @@ cd ../..
 echo "----------------------------------------------------------------"
 echo "- yarn build"
 cd ${CONFLUENZA_PATH}
-yarn build
+[ -z "$PREFIX_PATH" ] && yarn build || yarn build:prefix-paths
 cd ../..
 
 echo "----------------------------------------------------------------"
