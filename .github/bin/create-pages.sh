@@ -33,7 +33,7 @@ cd ../..
 echo "----------------------------------------------------------------"
 echo "- yarn build"
 cd ${CONFLUENZA_PATH}
-yarn build
+[ -z "$PREFIX_PATH" ] && yarn build || yarn build:prefix-paths
 cd ../..
 
 echo "----------------------------------------------------------------"
