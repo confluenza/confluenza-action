@@ -21,7 +21,7 @@ jobs:
       with:
         node-version: 14.x
     - name: Create confluenza pages 📦 
-      uses: philips-labs/confluenza-action@main
+      uses: confluenza/confluenza-action@main
       env:
         PREFIX_PATH: true
     - name: Deploy 🚀
