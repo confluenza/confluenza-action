@@ -22,7 +22,7 @@ cp gatsby-config.js ${CONFLUENZA_PATH}
  
 echo "  - copy pages"
 rm -rf ${CONFLUENZA_PATH}/src/pages
-cp -r pages ${CONFLUENZA_PATH}/src/
+cp -r src/pages ${CONFLUENZA_PATH}/src/
 
 echo "----------------------------------------------------------------"
 echo "- yarn"

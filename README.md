@@ -13,7 +13,7 @@ Add a `CONFLUENZA.md` in your project with the menu structure and tags.
 See [confluenza documentation](https://confluenza.online/developers/making-confluenza-yours#frontmatter-and-confluenzayml)
 
 #### Page content
-Add a folder `pages` with markdown (`.md` or `.mdx`) files.
+Add a folder `src\pages` with markdown (`.md` or `.mdx`) files.
 Add a frontmatter to a file with information about:
 - `path` : url path
 - `title` : title of section
