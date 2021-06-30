@@ -4,7 +4,6 @@ on:
   push:
     branches: 
       - main
-      - add-gatsby-config
   pull_request:
     branches:
       - main
@@ -22,7 +21,7 @@ jobs:
       with:
         node-version: 14.x
     - name: Create confluenza pages 📦 
-      uses: philips-labs/confluenza-action@add-gatsby-config
+      uses: philips-labs/confluenza-action@main
       env:
         PREFIX_PATH: true
     - name: Deploy 🚀
