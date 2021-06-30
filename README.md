@@ -21,6 +21,17 @@ Add a frontmatter to a file with information about:
 
 See [confluenza documentation](https://confluenza.online/developers/making-confluenza-yours#frontmatter-and-confluenzayml)
 
+#### `gatsby-config.js`
+Add a `gatsby-config.js` file.
+This file contains:
+- the `title` of the site
+- the `prefixPath` (if necessary, see [confluenza documentation](https://solo.confluenza.online/developers/deploying-to-github-pages))
+- the `editBaseUrl`
+
+See [gatsby-config.js](./gatsby-config.js) for an example.
+
+> Temporary solution: This will be removed when #2 is implemented.
+
 ### GitHub Workflow
 
 ```

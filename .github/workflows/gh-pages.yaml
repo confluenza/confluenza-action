@@ -2,9 +2,12 @@ name: GH Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - main
+      - add-gatsby-config
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   publish-pages:
@@ -19,7 +22,7 @@ jobs:
       with:
         node-version: 14.x
     - name: Create confluenza pages 📦 
-      uses: philips-labs/confluenza-action@main
+      uses: philips-labs/confluenza-action@add-gatsby-config
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
