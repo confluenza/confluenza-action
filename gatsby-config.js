@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Confluenza Solo Action',
-    editBaseUrl: 'https://github.com/philips-labs/confluenza-action/blob/master'
+    editBaseUrl: 'https://github.com/confluenza/confluenza-action/blob/master'
   },
   pathPrefix: '/confluenza-action',
   plugins: [

@@ -42,7 +42,7 @@ See [gatsby-config.js](./gatsby-config.js) for an example.
     with:
       node-version: 14.x
   - name: Create confluenza pages 📦 
-    uses: philips-labs/confluenza-action@main
+    uses: confluenza/confluenza-action@main
   - name: Deploy 🚀
     uses: JamesIves/github-pages-deploy-action@4.1.4
     with:
