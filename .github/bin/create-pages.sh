@@ -24,6 +24,9 @@ echo "  - copy pages"
 rm -rf ${CONFLUENZA_PATH}/src/pages
 cp -r src/pages ${CONFLUENZA_PATH}/src/
 
+echo "  - copy README.md"
+cp README.md ${CONFLUENZA_PATH}
+
 echo "----------------------------------------------------------------"
 echo "- yarn"
 cd ${CONFLUENZA_PATH}
