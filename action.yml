@@ -9,6 +9,5 @@ runs:
   using: "composite"
   steps:
     - name: Create public folder
-      run: |
-        ./.github/bin/create-pages.sh
+      run: ${{ github.action_path }}/.github/bin/create-pages.sh
       shell: bash
