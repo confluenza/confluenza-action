@@ -3,7 +3,9 @@
 set -e
 set -o pipefail
 
-source .github/bin/libs.sh
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+source ${DIR}/libs.sh
 
 TEMP_DIR=.prepare
 CONFLUENZA_DIR=confluenza
