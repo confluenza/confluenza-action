@@ -32,7 +32,7 @@ cp -r src/pages ${CONFLUENZA_PATH}/src/
 
 printHeader "yarn"
 cd ${CONFLUENZA_PATH}
-git checkout 99b2bec949b4c1910669f93a5c0c4fed94e6b307
+git checkout 93925568708c43606de7f3395d383fded4363559
 yarn
 cd ../..
 
