@@ -17,6 +17,11 @@ mkdir ${TEMP_DIR}
 printHeader "getting confluenza"
 cd ${TEMP_DIR} 
 git clone https://github.com/confluenza/solo-template ${CONFLUENZA_DIR} &> /dev/null
+
+cd ${CONFLUENZA_DIR}
+git checkout 99b2bec949b4c1910669f93a5c0c4fed94e6b307
+cd -
+
 cd ..
 
 printHeader "copy contents to confluenza"
@@ -32,7 +37,6 @@ cp -r src/pages ${CONFLUENZA_PATH}/src/
 
 printHeader "yarn"
 cd ${CONFLUENZA_PATH}
-git checkout 99b2bec949b4c1910669f93a5c0c4fed94e6b307
 yarn
 cd ../..
 
