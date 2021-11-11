@@ -71,5 +71,26 @@ If it exists, it will be copied.
       CLEAN: true
  ```
 
+### GitHub Workflow in a container
+
+```
+    container: node:16
+
+    steps:
+    - name: Check out code 🛎️
+      uses: actions/checkout@v2
+    - name: Create confluenza pages 📦
+      uses: confluenza/confluenza-action@docker
+      env:
+        PREFIX_PATH: true
+    - name: Install rsync
+      run: apt-get update && apt-get install -y rsync && apt-get clean
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@4.1.4
+      with:
+        branch: gh-pages
+        folder: public
+        CLEAN: true
+```
 ## License
 MIT
