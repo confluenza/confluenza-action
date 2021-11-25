@@ -45,7 +45,7 @@ cd ${CONFLUENZA_PATH}
 [ -z "$PREFIX_PATH" ] && yarn build || yarn build:prefix-paths
 cd ../..
 
-printHeader "Copy to public to root"
+printHeader "Copy public to root"
 mv ${CONFLUENZA_PATH}/public public
 
 printHeader "Cleanup"
